@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<!-- Ensure the default Maven repository is enabled -->
+		<EnableDefaultMavenRepository>true</EnableDefaultMavenRepository>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="IKVM" Version="8.11.1" />
+		<PackageReference Include="IKVM.Maven.Sdk" Version="1.9.0" />
+		<!-- Maven dependencies -->
+		<MavenReference Include="org.apache.commons:commons-lang3:3.12.0" />
+		<MavenReference Include="com.google.guava:guava:31.1-jre" />
+		<!-- Apache FOP dependencies -->
+		<MavenReference Include="org.apache.xmlgraphics:fop:2.9" />
+		<!-- FOP dependencies -->
+		<MavenReference Include="org.apache.xmlgraphics:xmlgraphics-commons:2.9" />
+		<MavenReference Include="org.apache.pdfbox:pdfbox:2.0.29" />
+		<!-- Add more Maven dependencies as needed -->
+	</ItemGroup>
+</Project>
