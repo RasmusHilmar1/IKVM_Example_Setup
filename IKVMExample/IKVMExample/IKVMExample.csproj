@@ -1,23 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>net8.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<!-- Ensure the default Maven repository is enabled -->
-		<EnableDefaultMavenRepository>true</EnableDefaultMavenRepository>
+		<OutputType>Library</OutputType>
+		<TargetFrameworks>net48</TargetFrameworks>
 	</PropertyGroup>
+
 	<ItemGroup>
-		<PackageReference Include="IKVM" Version="8.11.1" />
-		<PackageReference Include="IKVM.Maven.Sdk" Version="1.9.0" />
-		<!-- Maven dependencies -->
-		<MavenReference Include="org.apache.commons:commons-lang3:3.12.0" />
-		<MavenReference Include="com.google.guava:guava:31.1-jre" />
-		<!-- Apache FOP dependencies -->
-		<MavenReference Include="org.apache.xmlgraphics:fop:2.9" />
-		<!-- FOP dependencies -->
-		<MavenReference Include="org.apache.xmlgraphics:xmlgraphics-commons:2.9" />
-		<MavenReference Include="org.apache.pdfbox:pdfbox:2.0.29" />
-		<!-- Add more Maven dependencies as needed -->
+		<PackageReference Include="IKVM" Version="8.6.1" />
+		<PackageReference Include="IKVM.Maven.Sdk" Version="1.5.4" />
+		<MavenReference Include="org.apache.xmlgraphics:fop-core" Version="2.8" />
 	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="align.xml">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="align.fo">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
 </Project>
